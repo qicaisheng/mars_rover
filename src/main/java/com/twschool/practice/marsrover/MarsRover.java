@@ -14,7 +14,7 @@ public class MarsRover {
         return marsRoverPlace;
     }
 
-    private MarsRoverPlace receiveSingleCommand(String command) {
+    private void receiveSingleCommand(String command) {
         if ("M".equals(command)) {
             marsRoverPlace.move();
         }
@@ -25,6 +25,5 @@ public class MarsRover {
             marsRoverPlace.turnRight();
         }
 
-        return marsRoverPlace;
     }
 }
