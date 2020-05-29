@@ -13,4 +13,8 @@ public enum Direction {
     public String getShortName() {
         return shortName;
     }
+
+    public Direction leftDirection() {
+        return WEST;
+    }
 }
