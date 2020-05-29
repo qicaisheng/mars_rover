@@ -40,4 +40,13 @@ public class MarsRoverPlaceTest {
         Assert.assertEquals("N", marsRoverPlace.getDirectionShortName());
     }
 
+    @Test
+    public void should_add_coordinatesY_by_1_when_move_give_direction_N() {
+        MarsRoverPlace marsRoverPlace = new MarsRoverPlace(0, 0, "N");
+
+        marsRoverPlace.move();
+
+        Assert.assertEquals(1, marsRoverPlace.getCoordinatesY());
+    }
+
 }
