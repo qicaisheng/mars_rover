@@ -29,21 +29,21 @@ public class MarsRoverPlace {
     }
 
     public void turnLeft() {
-        if ("N".equals(direction)) {
-            direction = "W";
-        } else if ("W".equals(direction)) {
-            direction = "S";
-        } else if ("S".equals(direction)) {
-            direction = "E";
-        } else if ("E".equals(direction)) {
-            direction = "N";
+        if (Direction.NORTH.getShortName().equals(direction)) {
+            direction = Direction.WEST.getShortName();
+        } else if (Direction.WEST.getShortName().equals(direction)) {
+            direction = Direction.SOUTH.getShortName();
+        } else if (Direction.SOUTH.getShortName().equals(direction)) {
+            direction = Direction.EAST.getShortName();
+        } else if (Direction.EAST.getShortName().equals(direction)) {
+            direction = Direction.NORTH.getShortName();
         }
 
     }
 
     public void turnRight() {
-        if ("N".equals(direction)) {
-            direction = "E";
+        if (Direction.NORTH.getShortName().equals(direction)) {
+            direction = Direction.EAST.getShortName();
         }
     }
 }
