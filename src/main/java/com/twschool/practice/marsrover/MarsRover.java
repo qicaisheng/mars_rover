@@ -9,19 +9,19 @@ public class MarsRover {
         this.marsRoverPosition = marsRoverPosition;
     }
 
-    public MarsRoverPosition receive(String command) {
-        Arrays.asList(command.split("")).forEach(this::receiveSingleCommand);
+    public MarsRoverPosition receive(String commands) {
+        Arrays.asList(commands.split("")).forEach(this::receiveSingleCommand);
         return marsRoverPosition;
     }
 
     private void receiveSingleCommand(String command) {
-        if ("M".equals(command)) {
+        if (Command.MOVE.getShortName().equals(command)) {
             marsRoverPosition.move();
         }
-        if ("L".equals(command)) {
+        if (Command.TURN_LEFT.getShortName().equals(command)) {
             marsRoverPosition.turnLeft();
         }
-        if ("R".equals(command)) {
+        if (Command.TURN_RIGHT.getShortName().equals(command)) {
             marsRoverPosition.turnRight();
         }
 
