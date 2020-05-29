@@ -19,3 +19,14 @@ L => (0,0) W
 MLMR => (x,y) ?
 
 但是由于火星地形复杂，所以火星车只能在安全可行区域内活动，当火星车执行移动指令时超出了安全可行区域，火星车将不执行该指令以及后续批量指令，并留在原地。
+
+
+## Tasking
+- give mars rover with init (0, 0) N space, when receive M command, then mars rover will replay the place (0, 1) N
+- give mars rover with init (0, 0) N space, when receive L command, then mars rover will replay the place (0, 0) W
+- give mars rover with init (0, 0) N space, when receive R command, then mars rover will replay the place (0, 0) E
+
+- give mars rover with init (0, 0) N space, when receive MMMM command, then mars rover will replay the place (0, 4) N
+- give mars rover with init (0, 0) N space, when receive MLLMR command, then mars rover will replay the place (0, 0) E
+
+- give mars rover with (5, 5) N space which is the safe area edge, when receive MM command, then mars rover will not move
