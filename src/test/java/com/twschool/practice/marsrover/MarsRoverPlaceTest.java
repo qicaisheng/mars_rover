@@ -10,7 +10,7 @@ public class MarsRoverPlaceTest {
         
         marsRoverPlace.turnLeft();
 
-        Assert.assertEquals("W", marsRoverPlace.getDirection());
+        Assert.assertEquals("W", marsRoverPlace.getDirectionShortName());
     }
 
     @Test
@@ -19,7 +19,7 @@ public class MarsRoverPlaceTest {
 
         marsRoverPlace.turnLeft();
 
-        Assert.assertEquals("S", marsRoverPlace.getDirection());
+        Assert.assertEquals("S", marsRoverPlace.getDirectionShortName());
     }
 
     @Test
@@ -28,7 +28,7 @@ public class MarsRoverPlaceTest {
 
         marsRoverPlace.turnLeft();
 
-        Assert.assertEquals("E", marsRoverPlace.getDirection());
+        Assert.assertEquals("E", marsRoverPlace.getDirectionShortName());
     }
 
     @Test
@@ -37,7 +37,7 @@ public class MarsRoverPlaceTest {
 
         marsRoverPlace.turnLeft();
 
-        Assert.assertEquals("N", marsRoverPlace.getDirection());
+        Assert.assertEquals("N", marsRoverPlace.getDirectionShortName());
     }
 
 }

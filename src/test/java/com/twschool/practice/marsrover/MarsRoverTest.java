@@ -12,7 +12,7 @@ public class MarsRoverTest {
 
         Assert.assertEquals(0, marsRoverPlace.getCoordinatesX());
         Assert.assertEquals(1, marsRoverPlace.getCoordinatesY());
-        Assert.assertEquals("N", marsRoverPlace.getDirection());
+        Assert.assertEquals("N", marsRoverPlace.getDirectionShortName());
     }
 
     @Test
@@ -23,7 +23,7 @@ public class MarsRoverTest {
 
         Assert.assertEquals(0, marsRoverPlace.getCoordinatesX());
         Assert.assertEquals(0, marsRoverPlace.getCoordinatesY());
-        Assert.assertEquals("W", marsRoverPlace.getDirection());
+        Assert.assertEquals("W", marsRoverPlace.getDirectionShortName());
     }
 
     @Test
@@ -34,7 +34,7 @@ public class MarsRoverTest {
 
         Assert.assertEquals(0, marsRoverPlace.getCoordinatesX());
         Assert.assertEquals(0, marsRoverPlace.getCoordinatesY());
-        Assert.assertEquals("E", marsRoverPlace.getDirection());
+        Assert.assertEquals("E", marsRoverPlace.getDirectionShortName());
     }
 
 }

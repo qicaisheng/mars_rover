@@ -20,7 +20,7 @@ public class MarsRoverPlace {
         return coordinatesY;
     }
 
-    public String getDirection() {
+    public String getDirectionShortName() {
         return direction.getShortName();
     }
 
