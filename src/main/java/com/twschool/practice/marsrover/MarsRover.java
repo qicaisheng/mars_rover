@@ -1,5 +1,7 @@
 package com.twschool.practice.marsrover;
 
+import java.util.Arrays;
+
 public class MarsRover {
     private MarsRoverPlace marsRoverPlace;
 
@@ -8,6 +10,11 @@ public class MarsRover {
     }
 
     public MarsRoverPlace receive(String command) {
+        Arrays.asList(command.split("")).forEach(this::receiveSingleCommand);
+        return marsRoverPlace;
+    }
+
+    private MarsRoverPlace receiveSingleCommand(String command) {
         if ("M".equals(command)) {
             marsRoverPlace.move();
         }
