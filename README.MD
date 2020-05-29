@@ -27,6 +27,6 @@ MLMR => (x,y) ?
 - give mars rover with init (0, 0) N space, when receive R command, then mars rover will replay the place (0, 0) E
 
 - give mars rover with init (0, 0) N space, when receive MMMM command, then mars rover will replay the place (0, 4) N
-- give mars rover with init (0, 0) N space, when receive MLLMR command, then mars rover will replay the place (0, 0) E
+- give mars rover with init (0, 0) N space, when receive MLLMR command, then mars rover will replay the place (0, 0) W
 
 - give mars rover with (5, 5) N space which is the safe area edge, when receive MM command, then mars rover will not move
