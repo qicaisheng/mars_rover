@@ -4,12 +4,12 @@ package com.twschool.practice.marsrover;
 public class MarsRoverPlace {
     private int coordinatesX;
     private int coordinatesY;
-    private String toward;
+    private String direction;
 
-    public MarsRoverPlace(int coordinatesX, int coordinatesY, String toward) {
+    public MarsRoverPlace(int coordinatesX, int coordinatesY, String direction) {
         this.coordinatesX = coordinatesX;
         this.coordinatesY = coordinatesY;
-        this.toward = toward;
+        this.direction = direction;
     }
 
     public int getCoordinatesX() {
@@ -20,8 +20,8 @@ public class MarsRoverPlace {
         return coordinatesY;
     }
 
-    public String getToward() {
-        return toward;
+    public String getDirection() {
+        return direction;
     }
 
     public void move() {
@@ -29,21 +29,21 @@ public class MarsRoverPlace {
     }
 
     public void turnLeft() {
-        if ("N".equals(toward)) {
-            toward = "W";
-        } else if ("W".equals(toward)) {
-            toward = "S";
-        } else if ("S".equals(toward)) {
-            toward = "E";
-        } else if ("E".equals(toward)) {
-            toward = "N";
+        if ("N".equals(direction)) {
+            direction = "W";
+        } else if ("W".equals(direction)) {
+            direction = "S";
+        } else if ("S".equals(direction)) {
+            direction = "E";
+        } else if ("E".equals(direction)) {
+            direction = "N";
         }
 
     }
 
     public void turnRight() {
-        if ("N".equals(toward)) {
-            toward = "E";
+        if ("N".equals(direction)) {
+            direction = "E";
         }
     }
 }

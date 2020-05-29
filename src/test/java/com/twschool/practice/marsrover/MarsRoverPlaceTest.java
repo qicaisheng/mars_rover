@@ -3,8 +3,6 @@ package com.twschool.practice.marsrover;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class MarsRoverPlaceTest {
     @Test
     public void should_return_toward_W_when_turn_left_give_init_toward_N() {
@@ -12,7 +10,7 @@ public class MarsRoverPlaceTest {
         
         marsRoverPlace.turnLeft();
 
-        Assert.assertEquals("W", marsRoverPlace.getToward());
+        Assert.assertEquals("W", marsRoverPlace.getDirection());
     }
 
     @Test
@@ -21,7 +19,7 @@ public class MarsRoverPlaceTest {
 
         marsRoverPlace.turnLeft();
 
-        Assert.assertEquals("S", marsRoverPlace.getToward());
+        Assert.assertEquals("S", marsRoverPlace.getDirection());
     }
 
     @Test
@@ -30,7 +28,7 @@ public class MarsRoverPlaceTest {
 
         marsRoverPlace.turnLeft();
 
-        Assert.assertEquals("E", marsRoverPlace.getToward());
+        Assert.assertEquals("E", marsRoverPlace.getDirection());
     }
 
     @Test
@@ -39,7 +37,7 @@ public class MarsRoverPlaceTest {
 
         marsRoverPlace.turnLeft();
 
-        Assert.assertEquals("N", marsRoverPlace.getToward());
+        Assert.assertEquals("N", marsRoverPlace.getDirection());
     }
 
 }
