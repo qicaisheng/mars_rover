@@ -33,4 +33,13 @@ public class MarsRoverPlaceTest {
         Assert.assertEquals("E", marsRoverPlace.getToward());
     }
 
+    @Test
+    public void should_return_toward_N_when_turn_left_give_init_toward_E() {
+        MarsRoverPlace marsRoverPlace = new MarsRoverPlace(0, 0, "E");
+
+        marsRoverPlace.turnLeft();
+
+        Assert.assertEquals("N", marsRoverPlace.getToward());
+    }
+
 }
