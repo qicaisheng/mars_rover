@@ -25,7 +25,12 @@ public class MarsRoverPlace {
     }
 
     public void move() {
-        this.coordinatesY++;
+        if (direction == Direction.NORTH) {
+            this.coordinatesY++;
+        } else if (direction == Direction.EAST) {
+            this.coordinatesX++;
+        }
+
     }
 
     public void turnLeft() {

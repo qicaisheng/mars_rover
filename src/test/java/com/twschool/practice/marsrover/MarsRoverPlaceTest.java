@@ -49,4 +49,13 @@ public class MarsRoverPlaceTest {
         Assert.assertEquals(1, marsRoverPlace.getCoordinatesY());
     }
 
+    @Test
+    public void should_add_coordinatesX_by_1_when_move_give_direction_E() {
+        MarsRoverPlace marsRoverPlace = new MarsRoverPlace(0, 0, "E");
+
+        marsRoverPlace.move();
+
+        Assert.assertEquals(1, marsRoverPlace.getCoordinatesX());
+    }
+
 }
