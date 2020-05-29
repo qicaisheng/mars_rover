@@ -33,4 +33,10 @@ public class MarsRoverPlace {
             toward = "W";
         }
     }
+
+    public void turnRight() {
+        if ("N".equals(toward)) {
+            toward = "E";
+        }
+    }
 }

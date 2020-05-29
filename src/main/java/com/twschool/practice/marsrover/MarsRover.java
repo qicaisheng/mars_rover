@@ -14,6 +14,10 @@ public class MarsRover {
         if ("L".equals(command)) {
             marsRoverPlace.turnLeft();
         }
+        if ("R".equals(command)) {
+            marsRoverPlace.turnRight();
+        }
+
         return marsRoverPlace;
     }
 }
