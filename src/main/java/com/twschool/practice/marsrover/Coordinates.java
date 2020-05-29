@@ -16,4 +16,16 @@ public class Coordinates {
     public int getCoordinatesY() {
         return coordinatesY;
     }
+
+    public void moveToward(String directionShortName) {
+        if (directionShortName.equals(Direction.NORTH.getShortName())) {
+            this.coordinatesY++;
+        } else if (directionShortName.equals(Direction.EAST.getShortName())) {
+            this.coordinatesX++;
+        } else if (directionShortName.equals(Direction.WEST.getShortName())) {
+            this.coordinatesX--;
+        } else if (directionShortName.equals(Direction.SOUTH.getShortName())) {
+            this.coordinatesY--;
+        }
+    }
 }
