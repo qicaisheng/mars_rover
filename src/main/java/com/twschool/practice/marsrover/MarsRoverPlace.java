@@ -27,4 +27,10 @@ public class MarsRoverPlace {
     public void move() {
         this.coordinatesY++;
     }
+
+    public void turnLeft() {
+        if ("N".equals(toward)) {
+            toward = "W";
+        }
+    }
 }

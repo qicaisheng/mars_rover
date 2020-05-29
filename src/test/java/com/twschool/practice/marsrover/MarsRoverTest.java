@@ -14,4 +14,16 @@ public class MarsRoverTest {
         Assert.assertEquals(1, marsRoverPlace.getCoordinatesY());
         Assert.assertEquals("N", marsRoverPlace.getToward());
     }
+
+    @Test
+    public void should_return_x_0_y_0_and_W_when_receive_L_command_give_mars_rover_with_init_place_x_0_y_0_N() {
+        MarsRover marsRover = new MarsRover(new MarsRoverPlace(0 ,0 , "N"));
+
+        MarsRoverPlace marsRoverPlace = marsRover.receive("L");
+
+        Assert.assertEquals(0, marsRoverPlace.getCoordinatesX());
+        Assert.assertEquals(0, marsRoverPlace.getCoordinatesY());
+        Assert.assertEquals("W", marsRoverPlace.getToward());
+    }
+
 }
