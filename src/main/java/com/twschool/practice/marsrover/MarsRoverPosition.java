@@ -1,12 +1,12 @@
 package com.twschool.practice.marsrover;
 
 
-public class MarsRoverPlace {
+public class MarsRoverPosition {
     private int coordinatesX;
     private int coordinatesY;
     private Direction direction;
 
-    public MarsRoverPlace(int coordinatesX, int coordinatesY, String direction) {
+    public MarsRoverPosition(int coordinatesX, int coordinatesY, String direction) {
         this.coordinatesX = coordinatesX;
         this.coordinatesY = coordinatesY;
         this.direction = Direction.fromShortName(direction);

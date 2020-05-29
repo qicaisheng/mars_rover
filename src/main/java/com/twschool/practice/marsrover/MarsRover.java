@@ -3,26 +3,26 @@ package com.twschool.practice.marsrover;
 import java.util.Arrays;
 
 public class MarsRover {
-    private MarsRoverPlace marsRoverPlace;
+    private MarsRoverPosition marsRoverPosition;
 
-    public MarsRover(MarsRoverPlace marsRoverPlace) {
-        this.marsRoverPlace = marsRoverPlace;
+    public MarsRover(MarsRoverPosition marsRoverPosition) {
+        this.marsRoverPosition = marsRoverPosition;
     }
 
-    public MarsRoverPlace receive(String command) {
+    public MarsRoverPosition receive(String command) {
         Arrays.asList(command.split("")).forEach(this::receiveSingleCommand);
-        return marsRoverPlace;
+        return marsRoverPosition;
     }
 
     private void receiveSingleCommand(String command) {
         if ("M".equals(command)) {
-            marsRoverPlace.move();
+            marsRoverPosition.move();
         }
         if ("L".equals(command)) {
-            marsRoverPlace.turnLeft();
+            marsRoverPosition.turnLeft();
         }
         if ("R".equals(command)) {
-            marsRoverPlace.turnRight();
+            marsRoverPosition.turnRight();
         }
 
     }
