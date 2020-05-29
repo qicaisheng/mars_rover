@@ -47,4 +47,11 @@ public class DirectionTest {
         Assert.assertEquals(Direction.SOUTH, Direction.EAST.rightDirection());
     }
 
+    @Test
+    public void should_get_from_short_name() {
+        Assert.assertEquals(Direction.NORTH, Direction.fromShortName("N"));
+        Assert.assertEquals(Direction.SOUTH, Direction.fromShortName("S"));
+        Assert.assertEquals(Direction.EAST, Direction.fromShortName("E"));
+        Assert.assertEquals(Direction.WEST, Direction.fromShortName("W"));
+    }
 }
