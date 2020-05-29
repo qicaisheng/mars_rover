@@ -58,4 +58,13 @@ public class MarsRoverPlaceTest {
         Assert.assertEquals(1, marsRoverPlace.getCoordinatesX());
     }
 
+    @Test
+    public void should_minus_coordinatesX_by_1_when_move_give_direction_W() {
+        MarsRoverPlace marsRoverPlace = new MarsRoverPlace(0, 0, "W");
+
+        marsRoverPlace.move();
+
+        Assert.assertEquals(-1, marsRoverPlace.getCoordinatesX());
+    }
+
 }

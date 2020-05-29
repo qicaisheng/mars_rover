@@ -29,6 +29,8 @@ public class MarsRoverPlace {
             this.coordinatesY++;
         } else if (direction == Direction.EAST) {
             this.coordinatesX++;
+        } else if (direction == Direction.WEST) {
+            this.coordinatesX--;
         }
 
     }
