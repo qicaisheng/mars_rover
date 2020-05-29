@@ -24,4 +24,13 @@ public class MarsRoverPlaceTest {
         Assert.assertEquals("S", marsRoverPlace.getToward());
     }
 
+    @Test
+    public void should_return_toward_E_when_turn_left_give_init_toward_S() {
+        MarsRoverPlace marsRoverPlace = new MarsRoverPlace(0, 0, "S");
+
+        marsRoverPlace.turnLeft();
+
+        Assert.assertEquals("E", marsRoverPlace.getToward());
+    }
+
 }
