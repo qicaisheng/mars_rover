@@ -9,11 +9,11 @@ public class MarsRover {
 
     public MarsRover(MarsRoverPosition marsRoverPosition) {
         this.marsRoverPosition = marsRoverPosition;
-        this.marsRoverSafetyArea = new MarsRoverSafetyArea(new Coordinates(marsRoverPosition.getCoordinatesX(), marsRoverPosition.getCoordinatesY()), DISTANCE);
+        this.marsRoverSafetyArea = new MarsRoverSafetyArea(marsRoverPosition.getCoordinates(), DISTANCE);
     }
-    
+
     public boolean isInSafetyArea() {
-        return marsRoverSafetyArea.contains(new Coordinates(marsRoverPosition.getCoordinatesX(), marsRoverPosition.getCoordinatesY()));
+        return marsRoverSafetyArea.contains(marsRoverPosition.getCoordinates());
     }
 
     public MarsRoverPosition receive(String commands) {
