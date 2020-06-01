@@ -2,6 +2,7 @@ package com.twschool.practice.marsrover;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 public class MarsRoverTest {
     @Test
@@ -75,6 +76,20 @@ public class MarsRoverTest {
         marsRover.receive("MMMMMM");
 
         Assert.assertFalse(marsRover.isInSafetyArea());
+    }
+
+    @Test
+    public void should_no_move_when_receive_commands_given_current_coordinates_out_of_safety_area() {
+        
+        MarsRover marsRover = Mockito.mock(MarsRover.class);
+        
+        Mockito.when(marsRover.getMarsRoverPosition()).thenReturn(new MarsRoverPosition(0, 6, "N"));
+        Mockito.when(marsRover.isInSafetyArea()).thenReturn(false);
+        Mockito.when(marsRover.receive(Mockito.anyString())).thenCallRealMethod();
+
+        MarsRoverPosition marsRoverPosition = marsRover.receive("M");
+
+        Assert.assertEquals(marsRover.getMarsRoverPosition(),  marsRoverPosition);
     }
 
 }

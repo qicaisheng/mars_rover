@@ -4,12 +4,16 @@ import java.util.Arrays;
 
 public class MarsRover {
     public static final int DISTANCE = 5;
+
     private MarsRoverSafetyArea marsRoverSafetyArea;
     private MarsRoverPosition marsRoverPosition;
-
     public MarsRover(MarsRoverPosition marsRoverPosition) {
         this.marsRoverPosition = marsRoverPosition;
         this.marsRoverSafetyArea = new MarsRoverSafetyArea(marsRoverPosition.getCoordinates(), DISTANCE);
+    }
+
+    public MarsRoverPosition getMarsRoverPosition() {
+        return marsRoverPosition;
     }
 
     public boolean isInSafetyArea() {
@@ -17,8 +21,10 @@ public class MarsRover {
     }
 
     public MarsRoverPosition receive(String commands) {
-        Arrays.asList(commands.split("")).forEach(this::receiveSingleCommand);
-        return marsRoverPosition;
+        if (isInSafetyArea()) {
+            Arrays.asList(commands.split("")).forEach(this::receiveSingleCommand);
+        }
+        return getMarsRoverPosition();
     }
 
     private void receiveSingleCommand(String command) {
