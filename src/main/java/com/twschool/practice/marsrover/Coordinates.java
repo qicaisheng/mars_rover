@@ -28,4 +28,8 @@ public class Coordinates {
             this.coordinatesY--;
         }
     }
+
+    public double distanceWith(Coordinates coordinates) {
+        return Math.sqrt(Math.pow(coordinates.getCoordinatesX() - getCoordinatesX(), 2) + Math.pow(coordinates.getCoordinatesY() - getCoordinatesY(), 2));
+    }
 }

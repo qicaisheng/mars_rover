@@ -19,7 +19,7 @@ public class MarsRoverSafetyArea {
 
     public boolean contains(Coordinates coordinates) {
 
-        double distanceWithCoordinates = Math.sqrt(Math.pow(coordinates.getCoordinatesX() - this.coordinates.getCoordinatesX(), 2) + Math.pow(coordinates.getCoordinatesY() - this.coordinates.getCoordinatesY(), 2));
+        double distanceWithCoordinates = coordinates.distanceWith(this.coordinates);
         return distanceWithCoordinates <= distance;
 
     }
