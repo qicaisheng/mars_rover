@@ -59,4 +59,22 @@ public class MarsRoverTest {
         Assert.assertEquals("W", marsRoverPosition.getDirectionShortName());
     }
 
+    @Test
+    public void should_return_true_when_current_coordinates_in_safety_area() {
+        MarsRover marsRover = new MarsRover(new MarsRoverPosition(0 ,0 , "N"));
+
+        marsRover.receive("MMMMM");
+        
+        Assert.assertTrue(marsRover.isInSafetyArea());
+    }
+
+    @Test
+    public void should_return_false_when_current_coordinates_out_of_safety_area() {
+        MarsRover marsRover = new MarsRover(new MarsRoverPosition(0 ,0 , "N"));
+
+        marsRover.receive("MMMMMM");
+
+        Assert.assertFalse(marsRover.isInSafetyArea());
+    }
+
 }

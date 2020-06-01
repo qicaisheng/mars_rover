@@ -3,10 +3,17 @@ package com.twschool.practice.marsrover;
 import java.util.Arrays;
 
 public class MarsRover {
+    public static final int DISTANCE = 5;
+    private MarsRoverSafetyArea marsRoverSafetyArea;
     private MarsRoverPosition marsRoverPosition;
 
     public MarsRover(MarsRoverPosition marsRoverPosition) {
         this.marsRoverPosition = marsRoverPosition;
+        this.marsRoverSafetyArea = new MarsRoverSafetyArea(new Coordinates(marsRoverPosition.getCoordinatesX(), marsRoverPosition.getCoordinatesY()), DISTANCE);
+    }
+    
+    public boolean isInSafetyArea() {
+        return marsRoverSafetyArea.contains(new Coordinates(marsRoverPosition.getCoordinatesX(), marsRoverPosition.getCoordinatesY()));
     }
 
     public MarsRoverPosition receive(String commands) {
