@@ -1,16 +1,16 @@
 package com.twschool.practice.marsrover;
 
 public class MarsRoverSafetyArea {
-    private Coordinates coordinates;
+    private Coordinates centerCoordinates;
     private int distance;
 
-    public MarsRoverSafetyArea(Coordinates coordinates, int distance) {
-        this.coordinates = coordinates;
+    public MarsRoverSafetyArea(Coordinates centerCoordinates, int distance) {
+        this.centerCoordinates = centerCoordinates;
         this.distance = distance;
     }
 
-    public Coordinates getCoordinates() {
-        return coordinates;
+    public Coordinates getCenterCoordinates() {
+        return centerCoordinates;
     }
 
     public int getDistance() {
@@ -19,7 +19,7 @@ public class MarsRoverSafetyArea {
 
     public boolean contains(Coordinates coordinates) {
 
-        double distanceWithCoordinates = coordinates.distanceWith(this.coordinates);
+        double distanceWithCoordinates = coordinates.distanceWith(this.centerCoordinates);
         return distanceWithCoordinates <= distance;
 
     }
