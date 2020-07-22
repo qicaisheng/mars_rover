@@ -22,19 +22,15 @@ public class MarsRoverPosition {
         return direction.getShortName();
     }
 
-    public void move() {
-        coordinates.moveToward(direction.getShortName());
-    }
-
-    public void turnLeft() {
-        direction = direction.leftDirection();
-    }
-
-    public void turnRight() {
-        direction = direction.rightDirection();
-    }
-
     public Coordinates getCoordinates() {
         return coordinates;
+    }
+
+    public Direction getDirection() {
+        return direction;
+    }
+
+    public void setDirection(Direction direction) {
+        this.direction = direction;
     }
 }
