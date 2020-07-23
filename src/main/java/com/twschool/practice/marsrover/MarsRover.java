@@ -20,7 +20,7 @@ public class MarsRover {
 
     private void receiveSingleCommand(String command) {
         if (Command.MOVE.getShortName().equals(command)) {
-            move();
+            new MoveCommand().move(marsRoverPosition);
         }
         if (Command.TURN_LEFT.getShortName().equals(command)) {
             turnLeft();
@@ -39,17 +39,4 @@ public class MarsRover {
         marsRoverPosition.setDirection(marsRoverPosition.getDirection().leftDirection());
     }
 
-    private void move() {
-        Coordinates coordinates = marsRoverPosition.getCoordinates();
-        String directionShortName = marsRoverPosition.getDirection().getShortName();
-        if (directionShortName.equals(Direction.NORTH.getShortName())) {
-            coordinates.increaseCoordinatesYByOne();
-        } else if (directionShortName.equals(Direction.EAST.getShortName())) {
-            coordinates.increaseCoordinatesXByOne();
-        } else if (directionShortName.equals(Direction.WEST.getShortName())) {
-            coordinates.decreaseCoordinatesXByOne();
-        } else if (directionShortName.equals(Direction.SOUTH.getShortName())) {
-            coordinates.decreaseCoordinatesYByOne();
-        }
-    }
 }
