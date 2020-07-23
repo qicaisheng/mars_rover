@@ -26,13 +26,9 @@ public class MarsRover {
             new TurnLeftCommand().turnLeft(marsRoverPosition);
         }
         if (Command.TURN_RIGHT.getShortName().equals(command)) {
-            turnRight();
+            new TurnRightCommand().turnRight(marsRoverPosition);
         }
 
-    }
-
-    private void turnRight() {
-        marsRoverPosition.setDirection(marsRoverPosition.getDirection().rightDirection());
     }
 
 }
