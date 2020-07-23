@@ -23,12 +23,20 @@ public class MarsRover {
             move();
         }
         if (Command.TURN_LEFT.getShortName().equals(command)) {
-            marsRoverPosition.setDirection(marsRoverPosition.getDirection().leftDirection());
+            turnLeft();
         }
         if (Command.TURN_RIGHT.getShortName().equals(command)) {
-            marsRoverPosition.setDirection(marsRoverPosition.getDirection().rightDirection());
+            turnRight();
         }
 
+    }
+
+    private void turnRight() {
+        marsRoverPosition.setDirection(marsRoverPosition.getDirection().rightDirection());
+    }
+
+    private void turnLeft() {
+        marsRoverPosition.setDirection(marsRoverPosition.getDirection().leftDirection());
     }
 
     private void move() {
