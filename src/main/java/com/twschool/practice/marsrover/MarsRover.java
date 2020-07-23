@@ -20,13 +20,13 @@ public class MarsRover {
 
     private void receiveSingleCommand(String command) {
         if (Command.MOVE.getShortName().equals(command)) {
-            new MoveCommand().move(marsRoverPosition);
+            new MoveCommand().doOperation(marsRoverPosition);
         }
         if (Command.TURN_LEFT.getShortName().equals(command)) {
-            new TurnLeftCommand().turnLeft(marsRoverPosition);
+            new TurnLeftCommand().doOperation(marsRoverPosition);
         }
         if (Command.TURN_RIGHT.getShortName().equals(command)) {
-            new TurnRightCommand().turnRight(marsRoverPosition);
+            new TurnRightCommand().doOperation(marsRoverPosition);
         }
 
     }

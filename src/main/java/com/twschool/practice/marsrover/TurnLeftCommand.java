@@ -2,7 +2,7 @@ package com.twschool.practice.marsrover;
 
 public class TurnLeftCommand {
 
-    public void turnLeft(MarsRoverPosition marsRoverPosition) {
+    public void doOperation(MarsRoverPosition marsRoverPosition) {
         marsRoverPosition.setDirection(marsRoverPosition.getDirection().leftDirection());
     }
 

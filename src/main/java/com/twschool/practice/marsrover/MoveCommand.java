@@ -2,7 +2,7 @@ package com.twschool.practice.marsrover;
 
 public class MoveCommand {
 
-    public void move(MarsRoverPosition marsRoverPosition) {
+    public void doOperation(MarsRoverPosition marsRoverPosition) {
         Coordinates coordinates = marsRoverPosition.getCoordinates();
         String directionShortName = marsRoverPosition.getDirection().getShortName();
         if (directionShortName.equals(Direction.NORTH.getShortName())) {
