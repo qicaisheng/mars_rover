@@ -1,7 +1,8 @@
 package com.twschool.practice.marsrover;
 
-public class MoveCommand {
+public class MoveCommand implements MarsRoverCommand {
 
+    @Override
     public void doOperation(MarsRoverPosition marsRoverPosition) {
         Coordinates coordinates = marsRoverPosition.getCoordinates();
         String directionShortName = marsRoverPosition.getDirection().getShortName();
