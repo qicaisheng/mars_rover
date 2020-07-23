@@ -17,19 +17,25 @@ public class Coordinates {
         return coordinatesY;
     }
 
-    public void moveToward(String directionShortName) {
-        if (directionShortName.equals(Direction.NORTH.getShortName())) {
-            this.coordinatesY++;
-        } else if (directionShortName.equals(Direction.EAST.getShortName())) {
-            this.coordinatesX++;
-        } else if (directionShortName.equals(Direction.WEST.getShortName())) {
-            this.coordinatesX--;
-        } else if (directionShortName.equals(Direction.SOUTH.getShortName())) {
-            this.coordinatesY--;
-        }
+    public void increaseCoordinatesXByOne() {
+        this.coordinatesX++;
+    }
+
+    public void decreaseCoordinatesXByOne() {
+        this.coordinatesX--;
+    }
+
+    public void increaseCoordinatesYByOne() {
+        this.coordinatesY++;
+    }
+
+    public void decreaseCoordinatesYByOne() {
+        this.coordinatesY--;
     }
 
     public double distanceWith(Coordinates coordinates) {
         return Math.sqrt(Math.pow(coordinates.getCoordinatesX() - getCoordinatesX(), 2) + Math.pow(coordinates.getCoordinatesY() - getCoordinatesY(), 2));
     }
+
+    
 }
