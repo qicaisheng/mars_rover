@@ -1,12 +1,16 @@
 package com.twschool.practice.marsrover;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class MarsRover {
     private MarsRoverPosition marsRoverPosition;
+    private List<MarsRoverCommand> marsRoverCommandList = new ArrayList<>();
 
     public MarsRover(MarsRoverPosition marsRoverPosition) {
         this.marsRoverPosition = marsRoverPosition;
+        marsRoverCommandList.addAll(Arrays.asList(new MoveCommand(), new TurnLeftCommand(), new TurnRightCommand()));
     }
 
     public MarsRoverPosition getMarsRoverPosition() {
@@ -24,15 +28,7 @@ public class MarsRover {
     }
 
     private MarsRoverCommand getMarsRoverCommand(String command) {
-        MarsRoverCommand marsRoverCommand;
-        if (Command.MOVE.getShortName().equals(command)) {
-            marsRoverCommand = new MoveCommand();
-        } else if (Command.TURN_LEFT.getShortName().equals(command)) {
-            marsRoverCommand = new TurnLeftCommand();
-        } else {
-            marsRoverCommand = new TurnRightCommand();
-        }
-        return marsRoverCommand;
+        return marsRoverCommandList.stream().filter(marsRoverCommand -> marsRoverCommand.match(command)).findFirst().orElseThrow(RuntimeException::new);
     }
 
 }
