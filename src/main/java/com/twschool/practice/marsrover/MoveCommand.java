@@ -17,4 +17,9 @@ public class MoveCommand implements MarsRoverCommand {
         }
     }
 
+    @Override
+    public boolean match(String command) {
+        return Command.MOVE.getShortName().equals(command);
+    }
+
 }

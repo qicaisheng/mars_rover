@@ -7,4 +7,9 @@ public class TurnLeftCommand implements MarsRoverCommand {
         marsRoverPosition.setDirection(marsRoverPosition.getDirection().leftDirection());
     }
 
+    @Override
+    public boolean match(String command) {
+        return Command.TURN_LEFT.getShortName().equals(command);
+    }
+
 }

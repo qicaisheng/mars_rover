@@ -6,5 +6,10 @@ public class TurnRightCommand implements MarsRoverCommand{
     public void doOperation(MarsRoverPosition marsRoverPosition) {
         marsRoverPosition.setDirection(marsRoverPosition.getDirection().rightDirection());
     }
+    
+    @Override
+    public boolean match(String command) {
+        return Command.TURN_RIGHT.getShortName().equals(command);
+    }
 
 }
